@@ -2,12 +2,11 @@
 
 An interactive Power BI dashboard analyzing the global spread, impact, and outcomes of the COVID-19 pandemic, built using the Johns Hopkins CSSE COVID-19 time-series dataset.
 
-![Dashboard Preview](Covid dashboard 2.png)
 
 ## 📌 Project Overview
 
 This project was completed as part of **AnalystLab Africa — Week 4: Data Visualization & Dashboarding**. The goal was to transform raw, cumulative COVID-19 case data into a clear, interactive dashboard that communicates global trends and country-level impact to a non-technical audience.
-
+![Dashboard Preview](Covid-19%20Dashboard.png)
 ## 📊 Dataset
 
 - **Source:** [Johns Hopkins CSSE COVID-19 Data Repository](https://github.com/CSSEGISandData/COVID-19)
