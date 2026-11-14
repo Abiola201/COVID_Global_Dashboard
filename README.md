@@ -1,6 +1,6 @@
 # COVID-19 Global Overview Dashboard
 
-An interactive Power BI dashboard analyzing the global spread, impact, and outcomes of the COVID-19 pandemic, built using the Johns Hopkins CSSE COVID-19 time-series dataset.
+An end-to-end Power BI analytics project exploring the global spread and impact of COVID-19 using historical data from the Johns Hopkins CSSE repository. The project transforms raw time-series data into an interactive dashboard, enabling users to explore confirmed cases, deaths, recovery trends, and country-level comparisons. It demonstrates practical skills in data cleaning, Power Query, DAX, data modelling, and data visualization.
 
 
 ## 📌 Project Overview
