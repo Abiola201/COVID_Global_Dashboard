@@ -105,7 +105,7 @@ RETURN
 
 - `Covid dashboard 2.pbix` — Power BI dashboard file
 - `Covid-19 clean dataset.pbix` — Power BI project file
-- `Covid-19 Dashboard.png` — Dashboard preview image
+- `screenshots/Covid-19 Dashboard.png` — Dashboard preview image
 - `confirmed_global.xlsx` — Confirmed cases dataset
 - `deaths_global.xlsx` — Deaths dataset
 - `recovered_global.xlsx` — Recovered cases dataset
