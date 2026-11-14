@@ -6,6 +6,7 @@ An end-to-end Power BI analytics project exploring the global spread and impact 
 ## 📌 Project Overview
 
 > **Note:** This is a historical analysis of the COVID-19 pandemic, not a live tracking dashboard. Recovery data availability is limited because Johns Hopkins CSSE discontinued its global recovery time-series reporting in mid-2021.
+> 
 ![Dashboard Preview](screenshots/Covid-19%20Dashboard.png)
 ## 📊 Dataset
 
