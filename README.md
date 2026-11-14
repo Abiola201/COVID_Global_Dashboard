@@ -103,9 +103,12 @@ RETURN
 
 ## 📁 Files in This Repo
 
-- `COVID_Global_Dashboard.pbix` — Power BI dashboard file
-- `COVID_Dashboard_Presentation.pptx` — Project presentation slides
-- `/screenshots` — Dashboard preview images
+- `Covid dashboard 2.pbix` — Power BI dashboard file
+- `Covid-19 clean dataset.pbix` — Power BI project file
+- `Covid-19 Dashboard.png` — Dashboard preview image
+- `confirmed_global.xlsx` — Confirmed cases dataset
+- `deaths_global.xlsx` — Deaths dataset
+- `recovered_global.xlsx` — Recovered cases dataset
 
 ## 👤 Author
 
