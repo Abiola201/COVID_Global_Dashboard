@@ -5,7 +5,7 @@ An end-to-end Power BI analytics project exploring the global spread and impact 
 
 ## 📌 Project Overview
 
-This project was completed as part of **AnalystLab Africa — Week 4: Data Visualization & Dashboarding**. The goal was to transform raw, cumulative COVID-19 case data into a clear, interactive dashboard that communicates global trends and country-level impact to a non-technical audience.
+> **Note:** This is a historical analysis of the COVID-19 pandemic, not a live tracking dashboard. Recovery data availability is limited because Johns Hopkins CSSE discontinued its global recovery time-series reporting in mid-2021.
 ![Dashboard Preview](screenshots/Covid-19%20Dashboard.png)
 ## 📊 Dataset
 
