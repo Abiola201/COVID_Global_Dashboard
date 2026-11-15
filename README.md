@@ -1,6 +1,23 @@
 # COVID-19 Global Overview Dashboard
 
-An end-to-end Power BI analytics project exploring the global spread and impact of COVID-19 using historical data from the Johns Hopkins CSSE repository. The project transforms raw time-series data into an interactive dashboard, enabling users to explore confirmed cases, deaths, recovery trends, and country-level comparisons. It demonstrates practical skills in data cleaning, Power Query, DAX, data modelling, and data visualization.
+## Executive Summary
+
+The COVID-19 Global Overview Dashboard is an interactive Power BI project developed to analyse global COVID-19 trends using historical data from Johns Hopkins University (JHU).
+
+The project transforms raw, cumulative COVID-19 datasets into meaningful insights through data cleaning, transformation, data modelling and DAX calculations.
+
+The dashboard provides an overview of:
+- Global confirmed cases, recoveries and deaths.
+- Countries with the highest reported confirmed cases.
+- COVID-19 trends over time.
+- Recovery and death rates.
+- Monthly growth patterns.
+
+**Key Highlight:** During data preparation, I identified and resolved a many-to-many merge issue that significantly inflated the reported totals. By refining the merge keys and implementing appropriate DAX measures, I improved the accuracy and reliability of the dashboard.
+
+This project demonstrates practical skills in Power BI, Power Query, DAX, data cleaning, data modelling and data visualization.
+
+*Note: The dashboard uses historical data covering January 2020 to March 2023 and does not represent current COVID-19 statistics.*
 
 
 ## 📌 Project Overview
