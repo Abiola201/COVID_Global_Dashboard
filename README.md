@@ -28,7 +28,7 @@ This project demonstrates practical skills in Power BI, Power Query, DAX, data c
 *Note: The dashboard uses historical data covering January 2020 to March 2023 and does not represent current COVID-19 statistics.*
 
 
-## 📌 Project Overview
+## Project Overview
 
 This project focuses on analysing the global spread and impact of COVID-19 using historical data from the Johns Hopkins University (JHU) CSSE repository.
 
