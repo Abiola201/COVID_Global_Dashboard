@@ -1,8 +1,16 @@
 # COVID-19 Global Overview Dashboard
 
+![Dashboard Preview](screenshots/Covid-19%20Dashboard.png)
+
 ## Executive Summary
 
 The COVID-19 Global Overview Dashboard is an interactive Power BI project developed to analyse global COVID-19 trends using historical data from Johns Hopkins University (JHU).
+
+The analysis covers the period from January 2020 to March 2023 and highlights the global impact of COVID-19, with approximately:
+
+- **677 million** confirmed cases
+- **7 million** reported deaths
+- **1.02%** overall case fatality rate
 
 The project transforms raw, cumulative COVID-19 datasets into meaningful insights through data cleaning, transformation, data modelling and DAX calculations.
 
@@ -47,7 +55,7 @@ The dashboard is designed for individuals, researchers, managers and other stake
 - DAX – Measures and analytical calculations.
 - Microsoft Excel – Dataset preparation and inspection.
 > 
-![Dashboard Preview](screenshots/Covid-19%20Dashboard.png)
+
 ## Data Sources
 
 The analysis is based on historical COVID-19 data obtained from the **Johns Hopkins University Center for Systems Science and Engineering (JHU CSSE)**.
@@ -92,7 +100,7 @@ Data preparation was carried out using **Power Query in Power BI** to ensure the
 
 4. **Date Transformation:** Applied locale-specific date conversion to resolve date parsing inconsistencies.
 
-5. **Data Integration:** Merged the three datasets into a single table named `COVID_Glob` using three matching keys:
+5. **Data Integration:** Merged the three datasets into a single table named `Covid19_Glob` using three matching keys:
    - Country/Region
    - Province/State
    - Date
@@ -113,13 +121,16 @@ This resolved the duplication issue and improved the accuracy of the final datas
 
 The cleaning and transformation process produced a consolidated dataset suitable for DAX calculations, time-based analysis and interactive Power BI visualizations.
 
-## 🧠 Data Modeling Notes
+## Data Modeling Notes
 
-The raw JHU files are in **wide format** (one column per date) and had to be:
-1. Unpivoted in Power Query to a long format (`Country/Region`, `Date`, `Value`)
-2. Renamed per metric (`Confirmed`, `Deaths`, `Recovered`)
-3. Merged into a single master table (`COVID_Glob`), matched on **three keys** — `Country/Region`, `Province/State`, and `Date` — since matching on only two keys caused a many-to-many join for countries with multiple province-level rows (e.g. UK, France, China), inflating totals into the billions
-4. A custom Date Table was built and marked for time-intelligence functions
+The three JHU datasets were transformed into a consolidated table for analysis.
+
+Key modelling decisions included:
+
+- Restructuring the original wide-format datasets into long format using Unpivot Columns.
+- Creating a custom Date Table for time-based analysis.
+- Matching records using Country/Region, Province/State and Date to prevent duplicate matches.
+- Using appropriate DAX calculations to retrieve the latest cumulative values rather than summing historical records.
 
 ### Key DAX Patterns Used
 Because the source data is **cumulative**, a simple `SUM()` across all dates massively over-counts. All headline totals instead use a "latest known value" pattern:
@@ -127,7 +138,7 @@ Because the source data is **cumulative**, a simple `SUM()` across all dates mas
 ```DAX
 Total Confirmed (Latest) = 
 CALCULATE(
-    SUM(COVID_Glob[Confirmed]),
+    SUM(Covid19_Glob[Confirmed]),
     LASTDATE(DateTable[Date])
 )
 ```
@@ -138,19 +149,25 @@ For `Total Recovered`, since JHU stopped updating that file before Confirmed/Dea
 Total Recovered (Latest) = 
 VAR LastRecoveredDate =
     CALCULATE(
-        MAX(COVID_Glob[Date]),
-        COVID_Glob[Recovered] > 0
+        MAX(Covid19_Glob[Date]),
+        Covid19_Glob[Recovered] > 0
     )
 RETURN
     CALCULATE(
-        SUM(COVID_Glob[Recovered]),
-        COVID_Glob[Date] = LastRecoveredDate
+        SUM(Covid19_Glob[Recovered]),
+        Covid19_Glob[Date] = LastRecoveredDate
     )
 ```
 
 ## Analysis and Visualizations
 
 The Power BI dashboard combines different visual elements to present global COVID-19 statistics in an interactive and easy-to-understand format.
+
+### Cumulative vs. New Daily Cases
+
+Cumulative cases represent the total number of confirmed cases recorded up to a specific date, while new daily cases represent the additional cases reported on that date.
+
+This distinction helps identify both the overall progression of the pandemic and changes in daily infection trends over time.
 
 ### Dashboard Components
 
@@ -285,7 +302,7 @@ This repository contains the Power BI dashboard, source datasets and supporting 
 ### Repository Structure
 
 ```text
-COVID_Global_Dashboard/
+Covid19_Global_Dashboard/
 │
 ├── dashboard/
 │   ├── Covid dashboard 2.pbix
