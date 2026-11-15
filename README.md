@@ -77,7 +77,6 @@ Three datasets were used for this project:
 The recovery dataset contains records only up to 4 August 2021 because Johns Hopkins discontinued recovery reporting. Therefore, recovery figures should be interpreted with this limitation in mind.
 
 The dashboard represents historical reported statistics and should not be interpreted as current COVID-19 figures.
-:::
 
 ## Data Cleaning & Transformation
 
@@ -93,7 +92,7 @@ Data preparation was carried out using **Power Query in Power BI** to ensure the
 
 4. **Date Transformation:** Applied locale-specific date conversion to resolve date parsing inconsistencies.
 
-5. **Data Integration:** Merged the three datasets into a single table named `Covid19_Glob` using three matching keys:
+5. **Data Integration:** Merged the three datasets into a single table named `COVID_Glob` using three matching keys:
    - Country/Region
    - Province/State
    - Date
@@ -122,7 +121,7 @@ The raw JHU files are in **wide format** (one column per date) and had to be:
 3. Merged into a single master table (`COVID_Glob`), matched on **three keys** — `Country/Region`, `Province/State`, and `Date` — since matching on only two keys caused a many-to-many join for countries with multiple province-level rows (e.g. UK, France, China), inflating totals into the billions
 4. A custom Date Table was built and marked for time-intelligence functions
 
-### Key DAX pattern used
+### Key DAX Patterns Used
 Because the source data is **cumulative**, a simple `SUM()` across all dates massively over-counts. All headline totals instead use a "latest known value" pattern:
 
 ```DAX
@@ -300,7 +299,8 @@ COVID_Global_Dashboard/
 ├── screenshots/
 │   └── Covid-19 Dashboard.png
 │
-└── README.md
+└── └── README.md
+```
 
 ## About the Author
 
