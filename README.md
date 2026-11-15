@@ -267,7 +267,7 @@ During the development of this dashboard, I encountered several technical challe
 This project strengthened my understanding of data transformation, data modelling, DAX calculations and troubleshooting in Power BI.
 
 It also reinforced the importance of validating data before building visualizations, as incorrect data relationships can produce misleading analytical results.
-:::
+
 
 ## Project Files and Repository Structure
 
@@ -299,7 +299,7 @@ COVID_Global_Dashboard/
 ├── screenshots/
 │   └── Covid-19 Dashboard.png
 │
-└── └── README.md
+└── README.md
 ```
 
 ## About the Author
